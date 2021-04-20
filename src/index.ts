@@ -46,7 +46,7 @@ export async function createWorker(
 	}: WorkerSettings = {}
 ): Promise<Worker>
 {
-	logger.debug('createWorker()');
+	logger.debug('createWorker()....@version3.6.37a');
 
 	if (appData && typeof appData !== 'object')
 		throw new TypeError('if given, appData must be an object');
