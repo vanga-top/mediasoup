@@ -7,6 +7,9 @@
 #include "MediaSoupErrors.hpp"
 #include "Settings.hpp"
 #include "Channel/Notifier.hpp"
+#include <iostream>
+
+using namespace std;
 
 /* Instance methods. */
 
@@ -14,6 +17,8 @@ Worker::Worker(::Channel::UnixStreamSocket* channel, PayloadChannel::UnixStreamS
   : channel(channel), payloadChannel(payloadChannel)
 {
 	MS_TRACE();
+
+	cout << "START WORKER FROM DEMO222222222" << endl;
 
 	// Set us as Channel's listener.
 	this->channel->SetListener(this);
