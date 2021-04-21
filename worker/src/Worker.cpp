@@ -33,7 +33,7 @@ Worker::Worker(::Channel::UnixStreamSocket* channel, PayloadChannel::UnixStreamS
 	this->signalsHandler->AddSignal(SIGINT, "INT");
 	this->signalsHandler->AddSignal(SIGTERM, "TERM");
 
-	// Tell the Node process that we are running.
+	// Tell the Node process that we are running.  向js层发送running指令，js层接受到这个指令会判断worker启动成功
 	Channel::Notifier::Emit(std::to_string(Logger::pid), "running");
 
 	MS_DEBUG_DEV("starting libuv loop");
