@@ -675,7 +675,6 @@ namespace RTC
 		MS_TRACE();
 
 		auto& consumers = this->mapProducerConsumers.at(producer);
-
 		//在这里可以更改consumer的配置，测试一下，流是否可以按需求输出....
 
 		for (auto* consumer : consumers)
