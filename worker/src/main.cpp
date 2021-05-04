@@ -35,6 +35,8 @@ void IgnoreSignals();
 
 int main(int argc, char* argv[])
 {
+	std::cout << "has been called mediasoup" << std::endl;
+	
 	// Ensure we are called by our Node library.
 	if (!std::getenv("MEDIASOUP_VERSION"))
 	{
